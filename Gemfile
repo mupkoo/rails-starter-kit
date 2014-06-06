@@ -12,6 +12,8 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+gem 'devise'
+
 group :development do
     gem 'letter_opener'
     gem 'jazz_hands'
