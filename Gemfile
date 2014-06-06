@@ -35,6 +35,17 @@ group :development, :test do
     gem 'spring-commands-rspec'
 
     gem 'rspec-rails', '~> 3.0.0'
+    gem 'guard-rspec'
+    gem 'fuubar'
+    gem 'factory_girl_rails'
+end
+
+group :test do
+    gem 'capybara'
+    gem 'shoulda-matchers'
+    gem 'faker'
+    gem 'launchy'
+    gem 'poltergeist'
 end
 
 # bundle exec rake doc:rails generates the API under doc/api.
