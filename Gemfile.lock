@@ -256,6 +256,10 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
+    redactor-rails (0.4.5)
+      devise
+      mime-types
+      orm_adapter
     responders (1.1.0)
       railties (>= 3.2, < 5)
     rspec (3.0.0)
@@ -356,6 +360,7 @@ DEPENDENCIES
   poltergeist
   quiet_assets
   rails (= 4.1.1)
+  redactor-rails
   rspec-rails (~> 3.0.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

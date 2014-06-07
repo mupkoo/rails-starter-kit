@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
     ActiveAdmin.routes(self)
+    mount RedactorRails::Engine => '/redactor_rails'
 
     devise_for :users
 

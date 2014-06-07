@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'mysql2'
 
-# CMS gem
+# CMS gems
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'redactor-rails'
 
 # Asset gems
 gem 'sass-rails', '~> 4.0.3'
