@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable
 
+    # Uploaders
+    mount_uploader :photo, UserPhotoUploader
+
 
     def is?(role)
         role.to_s == self.role
