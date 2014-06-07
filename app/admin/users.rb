@@ -36,9 +36,7 @@ ActiveAdmin.register User do
 
     form do |f|
         f.inputs 'User Details' do
-            f.input :photo, hint: (image_tag f.object.photo.url(:thumb) if f.object.photo.present?)
-            f.input :photo_cache, as: :hidden
-            f.input :remove_photo, as: :boolean if f.object.photo.present?
+            f.input :photo, as: :uploader
             f.input :email
             f.input :password, required: false
             f.input :password_confirmation

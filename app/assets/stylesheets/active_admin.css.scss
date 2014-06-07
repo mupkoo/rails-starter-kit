@@ -97,3 +97,30 @@ form input[type=time] {
     outline: none;
     padding: 6px 10px;
 }
+
+.uploader {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+
+    img {
+        padding: 5px;
+        border: 1px solid #c9d0d6;
+        float: left;
+        margin-right: 10px;
+        max-width: 85px;
+        background: white;
+    }
+
+    .uploader-label {
+        float: none;
+        margin-left: 20%;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+}
