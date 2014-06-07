@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'devise'
+gem 'simple_form', '~> 3.1.0.rc1'
 
 group :development do
     gem 'letter_opener'
