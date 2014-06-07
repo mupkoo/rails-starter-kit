@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'mysql2'
 
+# CMS gem
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 # Asset gems
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'

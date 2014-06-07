@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
            :recoverable, :rememberable, :validatable
 
 
+    def is?(role)
+        role.to_s == self.role
+    end
+
     def active_for_authentication?
         super && is_active
     end
