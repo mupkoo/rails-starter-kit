@@ -13,15 +13,22 @@
 
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="nav navbar-nav">
-                <li <%= 'class="active"' if current_page?(controller: 'home') %>>
+                <li class="<%= 'active' if current_page?('/') %>">
                     <%= link_to 'Home', root_path %>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">Right Side</a>
-                </li>
+                <% if user_signed_in? %>
+                    <li><%= link_to 'Sign out', destroy_user_session_path, data: { method: :delete } %></li>
+                <% else %>
+                    <li class="<%= 'active' if current_page?(new_user_session_path) %>">
+                        <%= link_to 'Sign in', new_user_session_path %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(new_user_registration_path) %>">
+                        <%= link_to 'Register', new_user_registration_path %>
+                    </li>
+                <% end %>
             </ul>
         </div>
     </div>

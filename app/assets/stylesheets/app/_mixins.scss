@@ -1,0 +1,17 @@
+%inline-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+%reset-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
