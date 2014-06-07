@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable
 
+    # Uploaders
+    mount_uploader :photo, UserPhotoUploader
+
 
     def active_for_authentication?
         super && is_active
