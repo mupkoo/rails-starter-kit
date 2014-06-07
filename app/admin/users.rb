@@ -32,7 +32,7 @@ ActiveAdmin.register User do
             f.input :email
             f.input :password, required: false
             f.input :password_confirmation
-            f.input :role
+            f.input :role, as: :select, collection: User::ROLES
             f.input :is_active
         end
 
