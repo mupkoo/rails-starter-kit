@@ -1,6 +1,7 @@
 ActiveAdmin.register User do
 
-    permit_params :email, :password, :password_confirmation, :role, :is_active
+    permit_params :email, :password, :password_confirmation, :role, :is_active,
+                  :photo, :remove_photo, :photo_cache
 
     filter :email
     filter :role
@@ -10,6 +11,9 @@ ActiveAdmin.register User do
         selectable_column
 
         column :id
+        column 'Photo' do |user|
+            image_tag user.photo.url(:thumb) if user.photo.present?
+        end
         column :email
         column :role
         column :is_active
@@ -20,6 +24,9 @@ ActiveAdmin.register User do
     show do |user|
         attributes_table do
             row :id
+            row 'Photo' do
+                image_tag user.photo.url(:thumb)
+            end
             row :email
             row :role
             row :is_active
@@ -29,6 +36,9 @@ ActiveAdmin.register User do
 
     form do |f|
         f.inputs 'User Details' do
+            f.input :photo, hint: (image_tag f.object.photo.url(:thumb) if f.object.photo.present?)
+            f.input :photo_cache, as: :hidden
+            f.input :remove_photo, as: :boolean if f.object.photo.present?
             f.input :email
             f.input :password, required: false
             f.input :password_confirmation
