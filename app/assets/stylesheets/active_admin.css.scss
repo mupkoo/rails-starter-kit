@@ -1,5 +1,13 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
+
+@mixin gradient($start, $end) {
+    background: $start;
+    background: -webkit-linear-gradient(-90deg, $start, $end);
+    background: -moz-linear-gradient(-90deg, $start, $end);
+    background: linear-gradient(180deg, $start, $end);
+}
+
 @import "active_admin/base";
 @import "libs/redactor";
 @import "libs/chosen";
@@ -96,6 +104,7 @@ form input[type=time] {
       content: " "; // 1
       display: table; // 2
     }
+
     &:after {
       clear: both;
     }
