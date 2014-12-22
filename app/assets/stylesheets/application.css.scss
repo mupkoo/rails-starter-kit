@@ -1,32 +1,32 @@
 // Custom variables
-@import "app/variables";
-@import "app/mixins";
+@import 'app/variables';
+@import 'app/mixins';
 
 // Core variables and mixins
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
 
 // Reset
-@import "bootstrap/normalize";
-@import "bootstrap/print";
+@import 'bootstrap/normalize';
+@import 'bootstrap/print';
 
 // Core CSS
-@import "bootstrap/scaffolding";
-@import "bootstrap/component-animations";
-@import "bootstrap/type";
-@import "bootstrap/grid";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
-@import "bootstrap/alerts";
-@import "bootstrap/navs";
-@import "bootstrap/navbar";
-@import "bootstrap/close";
-@import "bootstrap/jumbotron";
+@import 'bootstrap/scaffolding';
+@import 'bootstrap/component-animations';
+@import 'bootstrap/type';
+@import 'bootstrap/grid';
+@import 'bootstrap/forms';
+@import 'bootstrap/buttons';
+@import 'bootstrap/alerts';
+@import 'bootstrap/navs';
+@import 'bootstrap/navbar';
+@import 'bootstrap/close';
+@import 'bootstrap/jumbotron';
 
 // Custom core CSS
 
 // App components
-@import "app/devise";
+@import 'app/devise';
 
 // Utility classes
-@import "bootstrap/utilities";
+@import 'bootstrap/utilities';

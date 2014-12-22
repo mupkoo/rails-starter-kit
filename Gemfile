@@ -1,30 +1,33 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.0'
 gem 'mysql2'
 
 # CMS gems
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+gem 'activeadmin', github: 'lazaronixon/activeadmin', branch: 'master'
 gem 'redactor-rails'
 
 # Asset gems
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'devise'
-gem 'simple_form', '~> 3.1.0.rc1'
+gem 'simple_form', '~> 3.1.0'
 
 gem 'mini_magick'
 gem 'carrierwave'
 
 group :development do
     gem 'letter_opener'
-    gem 'jazz_hands'
+
+    gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+    gem 'pry-byebug'
+    gem 'web-console', '~> 2.0'
 
     # gem 'rack-mini-profiler'
     gem 'awesome_print' # awesome print in console
@@ -58,7 +61,4 @@ group :test do
     gem 'poltergeist'
 end
 
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
-
-ruby '2.1.1'
+ruby '2.1.5'
