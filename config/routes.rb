@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
+    devise_for :users, ActiveAdmin::Devise.config
     ActiveAdmin.routes(self)
     mount RedactorRails::Engine => '/redactor_rails'
-
-    devise_for :users
 
     root to: 'home#index'
 
