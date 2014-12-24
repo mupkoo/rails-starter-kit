@@ -16,6 +16,9 @@
                 <li class="<%= 'active' if current_page?('/') %>">
                     <%= link_to 'Home', root_path %>
                 </li>
+                <li class="<%= 'active' if current_page?('/contacts') %>">
+                    <%= link_to 'Contacts', contacts_path %>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
